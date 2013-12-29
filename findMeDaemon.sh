@@ -23,8 +23,8 @@ done
 set -x
 while true
 do  
-    #./findMe.sh &
-    #PID=$!
+    ./findMe.sh &
+    PID=$!
     echo "$(date +%d-%m-%Y\ %H:%M:%S): Start waiting for $interval Minutes."
     echo "Next start is at $(date -d "$interval Minutes")."
    sleep ${interval}m
