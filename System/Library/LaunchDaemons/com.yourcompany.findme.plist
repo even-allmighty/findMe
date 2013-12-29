@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Debug</key>
+	<true/>
+	<key>Label</key>
+	<string>com.yourcompany.findme</string>
+	<key>LowPriorityIO</key>
+	<false/>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/var/mobile/Library/findMe/findMeDaemon.sh</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/var/log/findMe/error.log</string>
+	<key>StandardOutPath</key>
+	<string>/var/log/findMe/debug.log</string>
+</dict>
+</plist>

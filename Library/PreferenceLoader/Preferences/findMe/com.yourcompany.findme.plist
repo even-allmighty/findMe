@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>entry</key>
+	<dict>
+		<key>cell</key>
+		<string>PSLinkCell</string>
+		<key>icon</key>
+		<string>findMe.png</string>
+		<key>label</key>
+		<string>findMe</string>
+	</dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Switch on to enable findMe.</string>
+			<key>label</key>
+			<string>Enabled</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<string>true</string>
+			<key>defaults</key>
+			<string>com.yourcompany.findme</string>
+			<key>headerText</key>
+			<string>header</string>
+			<key>key</key>
+			<string>enabled</string>
+			<key>label</key>
+			<string>Enabled</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Here goes the status message :)</string>
+			<key>label</key>
+			<string>Status</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Passwod: Password to encrypt data sent and to decrypt scripts downloaded.
+Timeout: Timeout in seconds to get the most accurate position.URL: URL to send/fetch the data. This is mandatory for the script to work!</string>
+			<key>label</key>
+			<string>Settings</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>default</key>
+			<string>--nopass--</string>
+			<key>defaults</key>
+			<string>com.yourcompany.findme</string>
+			<key>headerText</key>
+			<string>header</string>
+			<key>key</key>
+			<string>password</string>
+			<key>label</key>
+			<string>Password</string>
+			<key>placeholder</key>
+			<string>--nopass--</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>default</key>
+			<string>60</string>
+			<key>defaults</key>
+			<string>com.yourcompany.findme</string>
+			<key>isNumeric</key>
+			<true/>
+			<key>key</key>
+			<string>timeout</string>
+			<key>label</key>
+			<string>Timeout in Sec</string>
+			<key>placeholder</key>
+			<string>Enter value</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>default</key>
+			<string>http://example.com/example.php</string>
+			<key>defaults</key>
+			<string>com.yourcompany.findme</string>
+			<key>headerText</key>
+			<string>header</string>
+			<key>key</key>
+			<string>url</string>
+			<key>label</key>
+			<string>URL</string>
+			<key>placeholder</key>
+			<string>http://example.com/example.php</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>default</key>
+			<string>google.de</string>
+			<key>defaults</key>
+			<string>com.yourcompany.findme</string>
+			<key>headerText</key>
+			<string>header</string>
+			<key>key</key>
+			<string>pingHost</string>
+			<key>label</key>
+			<string>Ping-Host</string>
+			<key>placeholder</key>
+			<string>google.de</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Interval: Interval in minutes when the Script will run.</string>
+			<key>label</key>
+			<string>Deamon Settings</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>findme-changedSetting</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>30</string>
+			<key>defaults</key>
+			<string>com.yourcompany.findme</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>headerText</key>
+			<string>header</string>
+			<key>key</key>
+			<string>daemon-interval</string>
+			<key>label</key>
+			<string>Daemon Interval</string>
+			<key>validTitles</key>
+			<array>
+				<string>1 Minute</string>
+				<string>2 Minutes</string>
+				<string>3 Minutes</string>
+				<string>4 Minutes</string>
+				<string>5 Minutes</string>
+				<string>6 Minutes</string>
+				<string>10 Minutes</string>
+				<string>12 Minutes</string>
+				<string>15 Minutes</string>
+				<string>20 Minutes</string>
+				<string>30 Minutes</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+				<integer>5</integer>
+				<integer>6</integer>
+				<integer>10</integer>
+				<integer>12</integer>
+				<integer>15</integer>
+				<integer>20</integer>
+				<integer>30</integer>
+			</array>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>findMe</string>
+</dict>
+</plist>
