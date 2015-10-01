@@ -25,7 +25,7 @@ function log(){
 function daemonSettings(){
   DAEMONFILE="/System/Library/LaunchDaemons/com.yourcompany.findme.plist"
   daemonInterval=$(plutil -key daemon-interval $SETTINGSFILE)
-  echo "Changing Daemon Interval to run every $daemonInterval minutes." >> $TMPLOG
+  log "Changing Daemon Interval to run every $daemonInterval minutes."
   plutil -key StartCalendarInterval -remove $DAEMONFILE
   plutil -key StartCalendarInterval -array $DAEMONFILE
   dictCounter=0
@@ -80,7 +80,7 @@ function cleanUp() {
 
 trap cleanUp SIGTERM SIGINT
 
-echo "Start: $(date +%d-%m-%Y\ %H:%M:%S)" >> $TMPLOG
+log "Start: $(date +%d-%m-%Y\ %H:%M:%S)"
 
 while [[ $# -gt 0 ]] && [[ ."$1" = .-* ]] ;
 do
