@@ -1,6 +1,5 @@
 #!/bin/bash
 #set -x
-cd /var/mobile/Library/findMe
 echo "Startup @ $(date +%d-%m-%Y\ %H:%M:%S)"
 SETTINGSFILE="/var/mobile/Library/Preferences/com.yourcompany.findme.plist"
 interval=$(plutil -key daemon-interval $SETTINGSFILE)
@@ -23,7 +22,7 @@ done
 set -x
 while true
 do
-  ./findMe.sh &
+  /usr/bin/findMe.sh &
   PID=$!
   echo "$(date +%d-%m-%Y\ %H:%M:%S): Start waiting for $interval Minutes."
   echo "Next start is at $(date -d "$interval Minutes")."
