@@ -23,27 +23,16 @@ Because you will understand the Setup better, read this first :)
 
 
 The whole script works by using Activator by Ryan Petrich to activate all neccessary services to obtain the current location with a commandline utility called LcMe by UNKNOWN (if you know who wrote it or know an open source alternative, please tell me :)) which can be downloaded here : http://iphone.2tuto.com/index.php?2012/05/09/12/58/59-lcme-a-command-line-tool-that-displays-gps-last-locations-for-iphone (I dont know if I am allowed to publish it here).
-To use Activator from the commandline it uses TerminalActivator by iolate which creates events that you can call with the included "notify_post" utility.
 The Script is run by launchd either directly (see Problems section) or by the wrapper script that acts as deamon (the current state).
-To provide a status it writes a Logfile and presents the output in the settingspane. You can also change different settings there.
+To provide a status it writes a Logfile and presents the output in the settings pane. You can also change different settings there.
 
 
 Setup
 =======
 
-Because I use a lot of tools the setup needs some work :)
+1. Things you need from cydia:  PreferenceLoader, Activator, plutil, curl, "Find Utilities" and inetutils
 
-1. Things you need from cydia:  PreferenceLoader, Activator, TerminalActivator, plutil, curl, "Find Utilities" and inetutils
-
-2. Setup the TerminalActivator Events in the Settings. Currently following events are needed:
-enableGPS, disableGPS, enableData, disableData, enableAirplane, disableAirplane each of one with the corresponding activator toggle ;)
-
-3. Copy all the Stuff of the directories to the right dirs from /.
- And the LcMe files (http://iphone.2tuto.com/index.php?2012/05/09/12/58/59-lcme-a-command-line-tool-that-displays-gps-last-locations-for-iphone) and findMe.sh and findMeDaemon.sh to /var/mobile/Library/findMe  
-
-
-4. (optional) This part is incomplete and will be written as soon someone starts asking questions :P
-
+2. Copy all the Stuff of the directories to the right dirs from "/", or run the "setup.sh" as root(!).
 
 Problems
 =========

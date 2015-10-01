@@ -15,18 +15,18 @@ echo "so starttime is $(date -d @$newTime)."
 
 while true
 do
-   if [[ $(date +%s) -ge $newTime ]]; then
-   break 
-fi
-   sleep 5
+  if [[ $(date +%s) -ge $newTime ]]; then
+    break
+  fi
+  sleep 5
 done
 set -x
 while true
-do  
-    ./findMe.sh &
-    PID=$!
-    echo "$(date +%d-%m-%Y\ %H:%M:%S): Start waiting for $interval Minutes."
-    echo "Next start is at $(date -d "$interval Minutes")."
-   sleep ${interval}m
+do
+  ./findMe.sh &
+  PID=$!
+  echo "$(date +%d-%m-%Y\ %H:%M:%S): Start waiting for $interval Minutes."
+  echo "Next start is at $(date -d "$interval Minutes")."
+  sleep ${interval}m
 done
 
